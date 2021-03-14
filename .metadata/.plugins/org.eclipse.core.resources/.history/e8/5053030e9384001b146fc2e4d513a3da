@@ -1,0 +1,9 @@
+server:
+  port: 8989
+spring:
+  application:
+    name: doctor-portal
+
+Doctor-Service:
+     ribbon :
+     listOfServers: localhost:7071,localhost:7072

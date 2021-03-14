@@ -1,0 +1,61 @@
+Quick Intro of Service Discovery
+=================================================
+
+The important of MicroService Architecture 
+1)Client side service discovery.
+Netflix Eureka 
+2)Server side service discovery.
+AWS Elastic Load Balancer
+-------------------------------------------------------------------------------------------------------------------------
+Lookup service for finding active instances.
+
+getNextServerFromEureka->
+Gets the next possible server to process the requests from the registry information received from eureka.
+
+1.8 Using the EurekaClient
+Once you have an application that is a discovery client, you can use it to discover service instances from the Eureka Server. One way to do so is to use the native com.netflix.discovery.EurekaClient (as opposed to the Spring Cloud DiscoveryClient), as shown in the following example:
+
+@Autowired
+private EurekaClient discoveryClient;
+
+public String serviceUrl() {
+    InstanceInfo instance = discoveryClient.getNextServerFromEureka("STORES", false);
+    return instance.getHomePageUrl();
+}
+-----------------------------------------------------------------------------------------------------------------
+1. Quick Intro of service discovery and registry
+
+2. Importance of Service discovery and registry
+
+3. Service registry and discovery in the microservices architecture
+
+4. Detailed Explanation of service discovery and registry
+
+5. Importance of Service discovery and registry
+
+6. Service registry and discovery in the microservices architecture
+
+
+
+
+
+
+
+------------------------------------------------------------------------------
+Load balancing improves the distribution of workloads across the multiple computer resources.
+
+there are two types of load balancers
+-----------------------------------------------------------
+1)client side load balancer
+2)server side load balancer
+
+Solution for Loadbalancer 
+-------------------------------------------------------
+Netflix Ribbon + spring boot
+@loadbalancer at RestTemplate
+
+Q)what are the algarithams are used to load balancing?
+-------------------------------------------------------------------------------------------
+1)Round Robin al;garitham
+2)Least Connection
+3)Agent-Based Adaptive Load Balancing

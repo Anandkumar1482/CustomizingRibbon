@@ -1,0 +1,4 @@
+server.port=8989
+spring.application.name=Doctor-Portal
+
+Doctor-Service.ribbon.listOfServers=localhost:7071

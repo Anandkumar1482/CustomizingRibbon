@@ -1,0 +1,5 @@
+package com.micro.configuration;
+
+public class LoadConfiguration {
+
+}

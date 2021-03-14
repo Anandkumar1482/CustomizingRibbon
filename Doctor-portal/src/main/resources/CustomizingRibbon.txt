@@ -1,0 +1,24 @@
+Demo - Customization of Netflix Ribbon With Eureka- Client Side Load Balancing + Spring Boot
+----------------------------------------------------------------------------------------------
+
+
+Main functionality of Ribbon ?
+To perform distribution load balancing , first it will check health condition and second is to perform distribution load balancing.
+
+Customizing LoadBalancing
+----------------------------------------------------------------------------------------------------------------------
+IPING -to check health condition
+==================================
+it is an interface that provides multiple implementations
+ 
+IPING it is an interface that provides how we  'ping' a server to check if its alive
+
+1)DUMMY PING
+2)PingUrl -- to configure some url whether  the service is up or down based on that response.
+3)NIWSDiscovery ping
+------------------------------------------------------------------
+2)IRULE --Request Distribution -->it is a strategy for load balancing ,Well  Known load balancing Strategies including RoundRobin , RandomRule ,Response Time Based etc.
+
+1)Random Rule -randomly pic the instances in the service
+2)RoundRobinRule -by Default Ribbon uses 
+3)ZoneAvoidenceRule -this can be used for AWS Configuration.
